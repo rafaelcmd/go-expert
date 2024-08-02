@@ -6,6 +6,7 @@ func main() {
 	println(total)
 }
 
+// Variadic function is a function that can accept a variable number of arguments.
 func sum(nums ...int) int {
 	total := 0
 	for _, num := range nums {

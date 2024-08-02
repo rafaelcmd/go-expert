@@ -10,6 +10,7 @@ func main() {
 }
 
 func sum(a, b *int) int {
+	// Use pointers when you want to change the value of the variable
 	*a = 50
 	*b = 50
 

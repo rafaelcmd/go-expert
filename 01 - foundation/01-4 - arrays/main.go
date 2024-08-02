@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+	// Array declaration
 	var myArray [3]int
 	myArray[0] = 1
 	myArray[1] = 4

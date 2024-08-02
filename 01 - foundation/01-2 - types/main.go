@@ -1,5 +1,6 @@
 package main
 
+// Type declaration
 type ID int
 
 var a ID = 1

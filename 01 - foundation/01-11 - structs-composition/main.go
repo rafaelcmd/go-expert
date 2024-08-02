@@ -6,6 +6,7 @@ type Customer struct {
 	name   string
 	age    int
 	active bool
+	// Struct composition
 	Address
 }
 

@@ -5,6 +5,7 @@ func main() {
 	println(a)
 	println(&a)
 
+	// Pointer is a type that stores the memory address of another variable
 	var pointer *int = &a
 	println(pointer)
 

@@ -22,6 +22,7 @@ type Company struct {
 	Address
 }
 
+// Interface is a set of method signatures
 type Person interface {
 	disable()
 }

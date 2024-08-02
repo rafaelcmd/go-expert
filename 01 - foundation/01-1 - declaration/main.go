@@ -1,7 +1,9 @@
 package main
 
+// Package level declaration
 const a = "Hello World"
 
+// Multiple declaration
 var (
 	b bool    = true
 	c int     = 10

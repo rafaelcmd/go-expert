@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// Struct is a collection of fields
 type Customer struct {
 	name   string
 	age    int

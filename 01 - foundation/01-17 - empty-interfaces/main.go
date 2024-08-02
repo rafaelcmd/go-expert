@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+	// Empty interfaces can hold values of any type
 	var x interface{} = 10
 	var y interface{} = "hello"
 

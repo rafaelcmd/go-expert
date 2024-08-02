@@ -16,6 +16,7 @@ type Address struct {
 	zip    string
 }
 
+// Method is a function with a special receiver argument
 func (c Customer) disable() {
 	c.active = false
 	fmt.Printf("Customer has been disabled\n")

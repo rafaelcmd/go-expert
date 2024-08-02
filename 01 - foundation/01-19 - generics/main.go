@@ -6,6 +6,7 @@ type Number interface {
 	~int | float64
 }
 
+// Generic is a type that can be used with any type
 func Sum[T Number](m map[string]T) T {
 	var sum T
 
