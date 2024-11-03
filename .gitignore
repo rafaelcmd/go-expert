@@ -8,6 +8,9 @@
 # Environment variables
 .env
 
+# Data files
+*.db
+
 # Test binary, built with `go test -c`
 *.test
 
