@@ -19,7 +19,7 @@ func TestCreateProduct(t *testing.T) {
 	if err != nil {
 		t.Error(err)
 	}
-	product, err := entity.NewProduct("Product 1", 10)
+	product, err := entity.NewProduct("Product 1", 10.0)
 	assert.NoError(t, err)
 	productDB := NewProduct(db)
 	err = productDB.Create(product)
@@ -37,7 +37,7 @@ func TestFindAllProducts(t *testing.T) {
 		t.Error(err)
 	}
 	for i := 0; i < 10; i++ {
-		product, err := entity.NewProduct(fmt.Sprintf("Product %d", i), rand.Int())
+		product, err := entity.NewProduct(fmt.Sprintf("Product %d", i), rand.Float64())
 		assert.NoError(t, err)
 		productDB := NewProduct(db)
 		err = productDB.Create(product)
@@ -63,7 +63,7 @@ func TestFindProductByID(t *testing.T) {
 	if err != nil {
 		t.Error(err)
 	}
-	product, err := entity.NewProduct("Product 1", 10)
+	product, err := entity.NewProduct("Product 1", 10.0)
 	assert.NoError(t, err)
 	productDB := NewProduct(db)
 	err = productDB.Create(product)
@@ -82,7 +82,7 @@ func TestUpdateProduct(t *testing.T) {
 	if err != nil {
 		t.Error(err)
 	}
-	product, err := entity.NewProduct("Product 1", 10)
+	product, err := entity.NewProduct("Product 1", 10.0)
 	assert.NoError(t, err)
 	productDB := NewProduct(db)
 	err = productDB.Create(product)
@@ -92,7 +92,7 @@ func TestUpdateProduct(t *testing.T) {
 	assert.NoError(t, err)
 	productFound, err := productDB.FindByID(product.ID.String())
 	assert.NoError(t, err)
-	assert.Equal(t, 20, productFound.Price)
+	assert.Equal(t, 20.0, productFound.Price)
 }
 
 func TestDeleteProduct(t *testing.T) {
