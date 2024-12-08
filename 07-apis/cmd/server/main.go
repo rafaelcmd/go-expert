@@ -37,9 +37,10 @@ func main() {
 	r.Get("/products", productHandler.FindAllProducts)
 
 	userDB := database.NewUser(db)
-	userHandler := handlers.NewUserHandler(userDB)
+	userHandler := handlers.NewUserHandler(userDB, config.TokenAuth, config.JWTExpiresIn)
 
 	r.Post("/users", userHandler.CreateUser)
+	r.Post("/users/jwt", userHandler.GetJWT)
 
 	err = http.ListenAndServe(":8000", r)
 	if err != nil {
